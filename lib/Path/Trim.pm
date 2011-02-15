@@ -3,7 +3,7 @@ package Path::Trim;
 use warnings;
 use strict;
 
-use version; our $VERSION = qv('0.0.1');
+use version; our $VERSION = qv('0.0.2');
 
 sub new {
     return bless {}, __PACKAGE__;
@@ -166,6 +166,9 @@ Sets the directory separator to the value of C<directory_separator>.
 
 Accepts a path (without volume) and returns the trimmed version. It assumes that
 a directory separator has already been set with C<set_directory_separator()>.
+
+B<This is different from C<Cwd>'s C<abs_path()> in that it does not have any
+filesystem ties.>
 
 =back
 
